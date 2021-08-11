@@ -1,0 +1,10 @@
+.localisation {
+    @extend %flex-center;
+    grid-area: article;
+    height: 40px;
+    box-shadow:inset 0px 4px 4px 0px #c6c6c6;
+    background-color: #eaeaea;
+    .fa-map-marker-alt {
+        margin-right: 10px;
+    }
+}

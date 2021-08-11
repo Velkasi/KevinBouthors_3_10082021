@@ -137,7 +137,7 @@ header a:visited {
   color: black;
 }
 
-/*-----------------------------Article-----------------------------*/
+/*-----------------------------Section localisation-----------------------------*/
 .localisation {
   grid-area: article;
   height: 40px;
@@ -150,7 +150,8 @@ header a:visited {
   margin-right: 10px;
 }
 
-/*-----------------------------Aside-----------------------------*/
+/*-----------------------------Section reservation-----------------------------*/
+/*-----------------------------Section reservation-----------------------------*/
 .reservation {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -190,7 +191,8 @@ header a:visited {
           box-shadow: 0px 6px 7px 0px #c6c6c6;
 }
 
-/*-----------------------------Nav-----------------------------*/
+/*-----------------------------Section menu-----------------------------*/
+/*-----------------------------Section menu-----------------------------*/
 .menu {
   position: relative;
   max-width: 1280px;
@@ -232,21 +234,22 @@ header a:visited {
   margin-right: 10%;
 }
 
-.btn__menu .fa-mobile-alt, .btn__menu .fa-list-ul {
+.btn__menu .fa-mobile-alt, .btn__menu .fa-list-ul, .btn__menu .fa-store {
   color: gray;
-}
-
-.btn__menu .fa-store {
-  color: #9356DC;
 }
 
 .btn__menu:hover {
   -webkit-box-shadow: 0px 8px 6px 4px #ebebeb;
           box-shadow: 0px 8px 6px 4px #ebebeb;
   background-color: #f5edff;
+  color: #9356DC;
 }
 
-/*-----------------------------Main-----------------------------*/
+.btn__menu:hover .fas {
+  color: #9356DC;
+}
+
+/*-----------------------------Main restaurant-----------------------------*/
 .restaurant {
   background-color: #f6f6f6;
   grid-area: main;
@@ -325,23 +328,25 @@ header a:visited {
 }
 
 .card .fa-heart {
-  opacity: 1;
-  -webkit-transition: -webkit-filter 1.5s ease-in-out;
-  transition: -webkit-filter 1.5s ease-in-out;
-  transition: filter 1.5s ease-in-out;
-  transition: filter 1.5s ease-in-out, -webkit-filter 1.5s ease-in-out;
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
+  font-weight: 400;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #99E2D0;
+  -webkit-filter: brightness(20%);
+          filter: brightness(20%);
+  -webkit-transition: -webkit-filter .6s ease-in;
+  transition: -webkit-filter .6s ease-in;
+  transition: filter .6s ease-in;
+  transition: filter .6s ease-in, -webkit-filter .6s ease-in;
 }
 
 .card .fa-heart:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(70%, #FF79DA));
   background: linear-gradient(#9356DC 0%, #FF79DA 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  -webkit-filter: brightness(1.6);
-          filter: brightness(1.6);
 }
 
 /*-----------------------------Footer-----------------------------*/

@@ -42,11 +42,8 @@ des points de suspension. Un exemple de l’effet attendu est fourni.
 			margin-left: 10%;
 			margin-right: 10%;
 		}
-		.fa-mobile-alt, .fa-list-ul {
+		.fa-mobile-alt, .fa-list-ul,.fa-store {
 			color: gray;
-		}
-		.fa-store {
-			color: $color-primary;
 		}
 	}
 @mixin background-btn ($color-primary, $color-secondary) {
