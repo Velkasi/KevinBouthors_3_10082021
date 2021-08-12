@@ -24,6 +24,8 @@
 			box-shadow: 0px 4px 5px 0px #c6c6c6;
 			}
 				&:hover {
-				box-shadow: 0px 6px 7px 0px #c6c6c6;
-				}
+					transition: filter .5s ease-in-out;
+					filter: brightness(120%);
+					box-shadow: 0px 8px 7px 0px rgb(147, 147, 147);
+					}
 	}

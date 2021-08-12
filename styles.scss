@@ -9,7 +9,7 @@
 @import "./Layout/media-queries";
 	/*-----------------------------Header-----------------------------*/
 @import "./Layout/header";
-	/*-----------------------------Section localisation-----------------------------*/
+	/*-----------------------------Section Index-----------------------------*/
 @import "./Layout/section_localisation";
 	/*-----------------------------Section reservation-----------------------------*/
 @import "./Layout/section_reservation";
@@ -19,3 +19,6 @@
 @import "./Layout/main";
 	/*-----------------------------Footer-----------------------------*/
 @import "./Layout/footer";
+	/*-----------------------------Pages-----------------------------*/
+@import "./Layout/section_background_restaurant";
+@import "./Layout/main_composition";

@@ -1,7 +1,7 @@
-/*-----------------------------Section menu-----------------------------*/
+/*-----------------------------Section box-----------------------------*/
 .menu {
     position: relative;
-    max-width: 1280px;
+    max-width: 500px;
     margin: 2rem auto;
     padding: 1rem;
     background-color: $white;
@@ -12,17 +12,20 @@
     .nmb{
     position: absolute;
     left: 5px;
-    height: 18px;
-    width: 18px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
-    font-size: 13px;
+    font-size: 15px;
     background-color: $color-primary;
     color: $white; 
     }
 }
 .btn__menu {
-@include btn__menu ($grey, $shadow, $color-primary);
+@include btn__box ($grey, $shadow, $color-primary);
 @extend %flex-align;
+@include for-tablet {
+    justify-content: center;
+}
 &:hover {
     box-shadow: 0px 8px 6px 4px $shadow;
     background-color: $primary-hover ;
