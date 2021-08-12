@@ -7,7 +7,7 @@
     background-color: $grey;
     max-width: 1235px;
     padding: 1.5rem;
-        .entree, .plats, .dessert {
+            .container__repas {
             margin: 1rem 0 0 0;
             h2{
                 border-bottom: solid .3rem $color-tertiary;
@@ -17,30 +17,56 @@
             }
         }
 }
+@import "../Utils/keyframe";
 .repas {
     margin: 1rem 0 0 0;
-    flex: 1;
     background-color: $white;
-    border: 2px solid black;
     border-radius: 1rem;
-    padding: .5rem;
-    &:hover {
-        background-color: greenyellow;
+    display: flex;
+    &:hover .repas__check{
+        visibility: visible;
+        }
+    &__text {
+        padding: .5rem;
+        flex: 4;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     &__title {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     &__subtitle {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    color: grey;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     &__price {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+        padding: .8rem;
+        display: flex;
+        align-items:flex-end;
+        justify-content: flex-end;
+        }
+    &__check {
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $color-tertiary;
+        flex: 1;
+        visibility: hidden;
+        @include for-tablet {
+            flex: .3;
+        }
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
+        animation-name: repas-slide-left;
+        i {
+            color: white;
+        }
+        &__slide {
+        }
     }
 }

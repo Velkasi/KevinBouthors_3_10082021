@@ -116,6 +116,52 @@ header, .localisation, .reservation, .btn {
           align-items: center;
 }
 
+/*-------------------Slide logo-----------------*/
+@-webkit-keyframes repas-slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes repas-slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+}
+
+/*---------------------animation rotate-center------------------------*/
+@-webkit-keyframes repas-rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes repas-rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 /*-----------------------------Header-----------------------------*/
 header {
   grid-area: header;
@@ -457,30 +503,84 @@ footer ul a:visited, footer ul a:link {
   padding: 1.5rem;
 }
 
-.composition .entree, .composition .plats, .composition .dessert {
+.composition .container__repas {
   margin: 1rem 0 0 0;
 }
 
-.composition .entree h2, .composition .plats h2, .composition .dessert h2 {
+.composition .container__repas h2 {
   border-bottom: solid 0.3rem #99E2D0;
   width: 2rem;
   color: grey;
   font-size: .9rem;
 }
 
-.repas {
-  margin: 1rem 0 0 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background-color: #ffff;
-  border: 2px solid black;
-  border-radius: 1rem;
-  padding: .5rem;
+/*-------------------Slide logo-----------------*/
+@-webkit-keyframes repas-slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
 }
 
-.repas:hover {
-  background-color: greenyellow;
+@keyframes repas-slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+}
+
+/*---------------------animation rotate-center------------------------*/
+@-webkit-keyframes repas-rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes repas-rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.repas {
+  margin: 1rem 0 0 0;
+  background-color: #ffff;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.repas:hover .repas__check {
+  visibility: visible;
+}
+
+.repas__text {
+  padding: .5rem;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .repas__title {
@@ -493,18 +593,52 @@ footer ul a:visited, footer ul a:link {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: grey;
 }
 
 .repas__price {
+  padding: .8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+}
+
+.repas__check {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #99E2D0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  visibility: hidden;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  -webkit-animation-name: repas-slide-left;
+          animation-name: repas-slide-left;
+}
+
+@media (min-width: 599px) {
+  .repas__check {
+    -webkit-box-flex: .3;
+        -ms-flex: .3;
+            flex: .3;
+  }
+}
+
+.repas__check i {
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
