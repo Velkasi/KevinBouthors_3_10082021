@@ -5,27 +5,49 @@
     border-top-right-radius: 2rem;
     margin: auto;
     background-color: $grey;
-    max-width: 1235px;
     padding: 1.5rem;
-            .container__repas {
-            margin: 1rem 0 0 0;
-            h2{
-                border-bottom: solid .3rem $color-tertiary;
-                width: 2rem;
-                color: grey;
-                font-size: .9rem;
-            }
-        }
+   .composition__title {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+    .fa-2x {
+        font-size: 1.6rem;
+    }
+    .fa-heart {
+        font-weight: 400;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: $color-tertiary;
+        filter: brightness(20%);
+        transition: filter .6s ease-in;
+        &:hover{
+        filter: brightness(100%);
+        @include background-btn ($color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold; 
+        }     
+    }
 }
-@import "../Utils/keyframe";
+}
+.container__repas {
+    h2{
+        border-bottom: solid .3rem $color-tertiary;
+        width: 2rem;
+        color: grey;
+    }
+}
 .repas {
     margin: 1rem 0 0 0;
     background-color: $white;
     border-radius: 1rem;
-    display: flex;
-    &:hover .repas__check{
-        visibility: visible;
-        }
+    display:flex;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    flex: 5;
     &__text {
         padding: .5rem;
         flex: 4;
@@ -48,25 +70,55 @@
         display: flex;
         align-items:flex-end;
         justify-content: flex-end;
-        }
+        margin-right: 3.5rem;
+    }
     &__check {
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
+        display:flex;
         align-items: center;
+        justify-content: center;
+        font-weight: bold;
         background: $color-tertiary;
+        margin: 0 -6rem 0 0;
         flex: 1;
-        visibility: hidden;
-        @include for-tablet {
-            flex: .3;
-        }
         border-bottom-right-radius: 1rem;
         border-top-right-radius: 1rem;
-        animation-name: repas-slide-left;
         i {
+            font-size: 1.5rem;
             color: white;
         }
-        &__slide {
-        }
     }
+    &:hover .repas__rotate {
+        animation: rotate-center .5s ease-in reverse .3s both;
+    }
+    &:hover .repas__check{
+        display: flex;
+        animation: repas-slide-left 1s both;
+        }
+}
+
+@include for-tablet {
+    .composition{
+        display: flex;
+        flex-wrap: wrap;
+        bottom: 0;
+        height: 38rem;
+        justify-content: center;
+            .composition__title{
+            display: flex;
+            align-items: flex-start;
+            }
+    }
+    .repas{
+        margin: 1rem 2rem 1rem 1rem;
+        width:25rem;
+    }
+}
+
+@include for-laptop {
+    .composition {
+       height: auto;
+    }
+        .container__repas {
+            margin: 1rem 0 0 0;
+        }
 }

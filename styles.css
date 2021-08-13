@@ -18,7 +18,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 104%;
   vertical-align: baseline;
 }
 
@@ -34,7 +34,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Shrikhand', cursive;
-  font-size: 19px;
   font-weight: 100;
 }
 
@@ -140,7 +139,7 @@ header, .localisation, .reservation, .btn {
 }
 
 /*---------------------animation rotate-center------------------------*/
-@-webkit-keyframes repas-rotate-center {
+@-webkit-keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -151,7 +150,7 @@ header, .localisation, .reservation, .btn {
   }
 }
 
-@keyframes repas-rotate-center {
+@keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -169,7 +168,7 @@ header {
 }
 
 header img {
-  max-width: 150px;
+  max-width: 15rem;
 }
 
 header .fa-arrow-left {
@@ -415,6 +414,10 @@ header a:visited {
   font-weight: bold;
 }
 
+.card .fa-2x {
+  font-size: 1.8rem;
+}
+
 /*-----------------------------Footer-----------------------------*/
 footer {
   display: -webkit-box;
@@ -499,65 +502,53 @@ footer ul a:visited, footer ul a:link {
   border-top-right-radius: 2rem;
   margin: auto;
   background-color: #f6f6f6;
-  max-width: 1235px;
   padding: 1.5rem;
 }
 
-.composition .container__repas {
-  margin: 1rem 0 0 0;
+.composition .composition__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  padding: 2rem 0 2rem 0;
 }
 
-.composition .container__repas h2 {
+.composition .composition__title .fa-2x {
+  font-size: 1.6rem;
+}
+
+.composition .composition__title .fa-heart {
+  font-weight: 400;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #99E2D0;
+  -webkit-filter: brightness(20%);
+          filter: brightness(20%);
+  -webkit-transition: -webkit-filter .6s ease-in;
+  transition: -webkit-filter .6s ease-in;
+  transition: filter .6s ease-in;
+  transition: filter .6s ease-in, -webkit-filter .6s ease-in;
+}
+
+.composition .composition__title .fa-heart:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(70%, #FF79DA));
+  background: linear-gradient(#9356DC 0%, #FF79DA 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.container__repas h2 {
   border-bottom: solid 0.3rem #99E2D0;
   width: 2rem;
   color: grey;
-  font-size: .9rem;
-}
-
-/*-------------------Slide logo-----------------*/
-@-webkit-keyframes repas-slide-left {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
-  }
-}
-
-@keyframes repas-slide-left {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
-  }
-}
-
-/*---------------------animation rotate-center------------------------*/
-@-webkit-keyframes repas-rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes repas-rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
 }
 
 .repas {
@@ -567,10 +558,13 @@ footer ul a:visited, footer ul a:link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.repas:hover .repas__check {
-  visibility: visible;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
 }
 
 .repas__text {
@@ -606,39 +600,79 @@ footer ul a:visited, footer ul a:link {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin-right: 3.5rem;
 }
 
 .repas__check {
-  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
   background: #99E2D0;
+  margin: 0 -6rem 0 0;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  visibility: hidden;
   border-bottom-right-radius: 1rem;
   border-top-right-radius: 1rem;
-  -webkit-animation-name: repas-slide-left;
-          animation-name: repas-slide-left;
-}
-
-@media (min-width: 599px) {
-  .repas__check {
-    -webkit-box-flex: .3;
-        -ms-flex: .3;
-            flex: .3;
-  }
 }
 
 .repas__check i {
+  font-size: 1.5rem;
   color: white;
+}
+
+.repas:hover .repas__rotate {
+  animation: rotate-center .5s ease-in reverse .3s both;
+}
+
+.repas:hover .repas__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: repas-slide-left 1s both;
+          animation: repas-slide-left 1s both;
+}
+
+@media (min-width: 599px) {
+  .composition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    bottom: 0;
+    height: 38rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .composition .composition__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .repas {
+    margin: 1rem 2rem 1rem 1rem;
+    width: 25rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1400px) {
+  .composition {
+    height: auto;
+  }
+  .container__repas {
+    margin: 1rem 0 0 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
