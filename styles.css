@@ -168,7 +168,7 @@ header {
 }
 
 header img {
-  max-width: 15rem;
+  max-width: 10rem;
 }
 
 header .fa-arrow-left {
@@ -186,6 +186,7 @@ header a:visited {
 .localisation {
   grid-area: article;
   height: 40px;
+  font-size: .9rem;
   -webkit-box-shadow: inset 0px 4px 4px 0px #c6c6c6;
           box-shadow: inset 0px 4px 4px 0px #c6c6c6;
   background-color: #eaeaea;
@@ -323,7 +324,7 @@ header a:visited {
 }
 
 .restaurant__title {
-  margin: 0 0 1rem 1rem;
+  margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
 
@@ -350,6 +351,7 @@ header a:visited {
   background-color: white;
   text-decoration: none;
   color: inherit;
+  font-size: 1rem;
 }
 
 .card__img {
@@ -502,7 +504,7 @@ footer ul a:visited, footer ul a:link {
   border-top-right-radius: 2rem;
   margin: auto;
   background-color: #f6f6f6;
-  padding: 1.5rem;
+  padding: .5rem;
 }
 
 .composition .composition__title {
