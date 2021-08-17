@@ -50,7 +50,7 @@
     flex: 5;
     &__text {
         padding: .5rem;
-        flex: 4;
+        flex: 3;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -71,6 +71,8 @@
         align-items:flex-end;
         justify-content: flex-end;
         margin-right: 3.5rem;
+        flex: 1;
+        transition: .7s ease-in-out;
     }
     &__check {
         display:flex;
@@ -87,6 +89,10 @@
             color: white;
         }
     }
+    &:hover .repas__price {
+        flex: 1;
+        margin-right: 6rem;
+    }
     &:hover .repas__rotate {
         animation: rotate-center .5s ease-in reverse .3s both;
     }
@@ -94,8 +100,8 @@
         display: flex;
         animation: repas-slide-left 1s both;
         }
+    
 }
-
 @include for-tablet {
     .composition{
         display: flex;

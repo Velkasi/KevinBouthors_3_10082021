@@ -43,3 +43,21 @@
             transform: rotate(360deg);
   }
 }
+
+/*-----------Loading spinner----------*/
+
+ @keyframes pulse {
+  0% {
+    color: $color-primary;
+    text-shadow: 0 0 5rem $color-tertiary;
+  }
+  80% {
+    color: $color-secondary;
+    text-shadow: 0 0 1rem $color-tertiary;
+  }
+  100% {
+    color: $color-primary;
+    text-shadow: 0 0 5rem $color-tertiary;
+  }
+
+ }

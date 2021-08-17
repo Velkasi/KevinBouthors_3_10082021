@@ -161,6 +161,103 @@ header, .localisation, .reservation, .btn {
   }
 }
 
+/*-----------Loading spinner----------*/
+@-webkit-keyframes pulse {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 5rem #99E2D0;
+  }
+  80% {
+    color: #FF79DA;
+    text-shadow: 0 0 1rem #99E2D0;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 5rem #99E2D0;
+  }
+}
+@keyframes pulse {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 5rem #99E2D0;
+  }
+  80% {
+    color: #FF79DA;
+    text-shadow: 0 0 1rem #99E2D0;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 5rem #99E2D0;
+  }
+}
+
+.spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.spinner .letter {
+  font-size: 5rem;
+  color: #FF79DA;
+  -webkit-animation: pulse 1.2s linear infinite;
+          animation: pulse 1.2s linear infinite;
+  border-bottom: thick double #99E2D0;
+}
+
+.letter:nth-child(1) {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+.letter:nth-child(2) {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.letter:nth-child(3) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.letter:nth-child(4) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.letter:nth-child(5) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.letter:nth-child(6) {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+.letter:nth-child(7) {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+.letter:nth-child(8) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
 /*-----------------------------Header-----------------------------*/
 header {
   grid-area: header;
@@ -571,9 +668,9 @@ footer ul a:visited, footer ul a:link {
 
 .repas__text {
   padding: .5rem;
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -603,6 +700,11 @@ footer ul a:visited, footer ul a:link {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-right: 3.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: .7s ease-in-out;
+  transition: .7s ease-in-out;
 }
 
 .repas__check {
@@ -628,6 +730,13 @@ footer ul a:visited, footer ul a:link {
 .repas__check i {
   font-size: 1.5rem;
   color: white;
+}
+
+.repas:hover .repas__price {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 6rem;
 }
 
 .repas:hover .repas__rotate {

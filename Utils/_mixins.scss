@@ -52,3 +52,7 @@ des points de suspension. Un exemple de l’effet attendu est fourni.
 @mixin background-btn ($color-primary, $color-secondary) {
 	background: linear-gradient($color-primary 0%, $color-secondary 70%);
 }
+
+@mixin tri-force ($color-primary, $color-secondary, $color-tertiary) {
+	background: linear-gradient($color-primary 10%, $color-secondary 40%, $color-tertiary 100%);
+}
