@@ -45,6 +45,12 @@
 }
 
 /*-----------Loading spinner----------*/
+@keyframes cache {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 
  @keyframes pulse {
   0% {
@@ -61,3 +67,14 @@
   }
 
  }
+
+ @keyframes anim-point {
+    0%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50%{
+      transform: translateY(-1rem);
+      opacity: .6;
+    }
+}

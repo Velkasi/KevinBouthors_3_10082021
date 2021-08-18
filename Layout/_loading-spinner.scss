@@ -9,13 +9,37 @@
     z-index: 10000;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.80);
+    animation: cache .5s both;
+    animation-delay: 2s;
         .letter {
-            font-size: 5rem;
+            font-size: 4rem;
             color: $color-secondary;
-            animation: pulse 1.2s linear infinite;
-            border-bottom: thick double $color-tertiary;
+            animation: pulse 1s linear 3;
+        }
+        .point {
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            margin: 1rem 0 0 .5rem;
+            animation: anim-point 1s ease-in-out 3;
         }
     }
+/*--------------------point delay-----------------------*/
+
+    .point:nth-child(9) {
+        animation-delay: .1s;
+        background: $color-primary;
+    }
+    .point:nth-child(10) {
+        animation-delay: .2s;
+        background: $color-secondary;
+    }
+    .point:nth-child(11) {
+        animation-delay: .3s;
+        background: $color-tertiary;
+    }
+/*--------------------letter delay----------------------*/
+
     .letter:nth-child(1) {
         animation-delay: .1s;
     }

@@ -162,6 +162,19 @@ header, .localisation, .reservation, .btn {
 }
 
 /*-----------Loading spinner----------*/
+@-webkit-keyframes cache {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes cache {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
 @-webkit-keyframes pulse {
   0% {
     color: #9356DC;
@@ -176,6 +189,7 @@ header, .localisation, .reservation, .btn {
     text-shadow: 0 0 5rem #99E2D0;
   }
 }
+
 @keyframes pulse {
   0% {
     color: #9356DC;
@@ -188,6 +202,32 @@ header, .localisation, .reservation, .btn {
   100% {
     color: #9356DC;
     text-shadow: 0 0 5rem #99E2D0;
+  }
+}
+
+@-webkit-keyframes anim-point {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    opacity: .6;
+  }
+}
+
+@keyframes anim-point {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    opacity: .6;
   }
 }
 
@@ -208,16 +248,48 @@ header, .localisation, .reservation, .btn {
   z-index: 10000;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.8);
+  -webkit-animation: cache .5s both;
+          animation: cache .5s both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .spinner .letter {
-  font-size: 5rem;
+  font-size: 4rem;
   color: #FF79DA;
-  -webkit-animation: pulse 1.2s linear infinite;
-          animation: pulse 1.2s linear infinite;
-  border-bottom: thick double #99E2D0;
+  -webkit-animation: pulse 1s linear 3;
+          animation: pulse 1s linear 3;
 }
 
+.spinner .point {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin: 1rem 0 0 .5rem;
+  -webkit-animation: anim-point 1s ease-in-out 3;
+          animation: anim-point 1s ease-in-out 3;
+}
+
+/*--------------------point delay-----------------------*/
+.point:nth-child(9) {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  background: #9356DC;
+}
+
+.point:nth-child(10) {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  background: #FF79DA;
+}
+
+.point:nth-child(11) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  background: #99E2D0;
+}
+
+/*--------------------letter delay----------------------*/
 .letter:nth-child(1) {
   -webkit-animation-delay: .1s;
           animation-delay: .1s;
@@ -659,8 +731,6 @@ footer ul a:visited, footer ul a:link {
   display: flex;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
   -webkit-box-flex: 5;
       -ms-flex: 5;
           flex: 5;
@@ -699,12 +769,12 @@ footer ul a:visited, footer ul a:link {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-right: 3.5rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-transition: .7s ease-in-out;
-  transition: .7s ease-in-out;
+  margin-right: 1.5rem;
+  -webkit-transition: .6s ease-out;
+  transition: .6s ease-out;
 }
 
 .repas__check {
