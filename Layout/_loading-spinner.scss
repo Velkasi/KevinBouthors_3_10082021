@@ -21,13 +21,13 @@
             width: 1rem;
             border-radius: 50%;
             margin: 1rem 0 0 .5rem;
-            animation: anim-point 1s ease-in-out 3;
+            animation: anim-point .9s ease-in-out 3;
         }
     }
 /*--------------------point delay-----------------------*/
 
     .point:nth-child(9) {
-        animation-delay: .1s;
+        animation-delay: 0s;
         background: $color-primary;
     }
     .point:nth-child(10) {
@@ -35,7 +35,7 @@
         background: $color-secondary;
     }
     .point:nth-child(11) {
-        animation-delay: .3s;
+        animation-delay: .4s;
         background: $color-tertiary;
     }
 /*--------------------letter delay----------------------*/

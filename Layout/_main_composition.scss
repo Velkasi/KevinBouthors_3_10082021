@@ -6,6 +6,7 @@
     margin: auto;
     background-color: $grey;
     padding: .5rem;
+    max-width: 1550px;
    .composition__title {
     display: flex;
     font-size: 1.5rem;
@@ -33,12 +34,43 @@
 }
 }
 .container__repas {
+    .repas.delay1 {
+        animation: apparition .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .repas.delay2 {
+        animation: apparition .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .repas.delay3 {
+        animation: apparition .9s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .repas.delay4 {
+        animation: apparition 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .repas.delay5 {
+        animation: apparition 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .repas.delay6 {
+        animation: apparition 1.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .repas.delay7 {
+        animation: apparition 2.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .repas.delay8 {
+        animation: apparition 2.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .repas.delay9 {
+        animation: apparition 2.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    } 
+    .repas.delay10 {
+        animation: apparition 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
     h2{
         border-bottom: solid .3rem $color-tertiary;
         width: 2rem;
         color: grey;
     }
 }
+
 .repas {
     margin: 1rem 0 0 0;
     background-color: $white;
@@ -91,6 +123,7 @@
     &:hover .repas__price {
         flex: 1;
         margin-right: 6rem;
+        transition: 1s;
     }
     &:hover .repas__rotate {
         animation: rotate-center .5s ease-in reverse .3s both;
@@ -126,4 +159,8 @@
         .container__repas {
             margin: 1rem 0 0 0;
         }
+}
+
+.btn {
+    margin:auto;
 }

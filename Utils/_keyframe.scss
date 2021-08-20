@@ -69,12 +69,21 @@
  }
 
  @keyframes anim-point {
-    0%{
-      transform: translateY(0);
-      opacity: 1;
+    70%{
+      transform: translateY(-1.5rem);
     }
-    50%{
-      transform: translateY(-1rem);
-      opacity: .6;
-    }
+}
+/*---------------------------Apparition---------------------*/
+
+@keyframes apparition {
+  0% {
+    transform: translateX(-999rem);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(2rem);
+    opacity: 0;
+    transform: scale(2,2);
+    
+  }
 }
