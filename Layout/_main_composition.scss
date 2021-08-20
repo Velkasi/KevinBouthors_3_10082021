@@ -1,11 +1,10 @@
 .composition {
     position: relative;
-    bottom: 3rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
-    margin: auto;
     background-color: $grey;
-    padding: .5rem;
+    padding: 1rem;
+    margin-top: -4rem;
     max-width: 1550px;
    .composition__title {
     display: flex;
@@ -34,6 +33,7 @@
 }
 }
 .container__repas {
+    margin-bottom: 2rem;
     .repas.delay1 {
         animation: apparition .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
@@ -138,7 +138,8 @@
     .composition{
         display: flex;
         flex-wrap: wrap;
-        bottom: 0;
+        flex-direction: row;
+        margin: -4rem auto 0 auto;
         height: 38rem;
         justify-content: center;
             .composition__title{
@@ -154,13 +155,16 @@
 
 @include for-laptop {
     .composition {
-       height: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
     }
         .container__repas {
-            margin: 1rem 0 0 0;
+        margin: auto;
         }
 }
 
 .btn {
     margin:auto;
+    
 }

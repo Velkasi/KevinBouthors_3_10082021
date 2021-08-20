@@ -473,7 +473,7 @@ header a:visited {
   margin-right: 10%;
 }
 
-@media (min-width: 599px) {
+@media (min-width: 500px) {
   .btn__menu .fas {
     margin-left: 0%;
   }
@@ -483,7 +483,7 @@ header a:visited {
   color: gray;
 }
 
-@media (min-width: 599px) {
+@media (min-width: 500px) {
   .btn__menu {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -625,7 +625,7 @@ footer {
   grid-area: footer;
 }
 
-@media (min-width: 599px) {
+@media (min-width: 500px) {
   footer {
     -webkit-transition: all 2s;
     transition: all 2s;
@@ -671,7 +671,7 @@ footer ul a:visited, footer ul a:link {
   height: 16rem;
 }
 
-@media (min-width: 599px) {
+@media (min-width: 500px) {
   .background__restaurant {
     height: 30rem;
   }
@@ -686,12 +686,11 @@ footer ul a:visited, footer ul a:link {
 
 .composition {
   position: relative;
-  bottom: 3rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
-  margin: auto;
   background-color: #f6f6f6;
-  padding: .5rem;
+  padding: 1rem;
+  margin-top: -4rem;
   max-width: 1550px;
 }
 
@@ -733,6 +732,10 @@ footer ul a:visited, footer ul a:link {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+}
+
+.container__repas {
+  margin-bottom: 2rem;
 }
 
 .container__repas .repas.delay1 {
@@ -892,14 +895,18 @@ footer ul a:visited, footer ul a:link {
           animation: repas-slide-left 1s both;
 }
 
-@media (min-width: 599px) {
+@media (min-width: 500px) {
   .composition {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    bottom: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: -4rem auto 0 auto;
     height: 38rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -919,12 +926,18 @@ footer ul a:visited, footer ul a:link {
   }
 }
 
-@media (min-width: 600px) and (max-width: 1400px) {
+@media (min-width: 501px) and (max-width: 1450px) {
   .composition {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     height: auto;
   }
   .container__repas {
-    margin: 1rem 0 0 0;
+    margin: auto;
   }
 }
 
