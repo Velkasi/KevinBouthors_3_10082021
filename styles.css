@@ -582,7 +582,7 @@ header a:visited {
 
 .card .fa-heart {
   font-weight: 400;
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: #99E2D0;
   -webkit-filter: brightness(20%);
           filter: brightness(20%);
@@ -597,7 +597,7 @@ header a:visited {
           filter: brightness(100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(70%, #FF79DA));
   background: linear-gradient(#9356DC 0%, #FF79DA 70%);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -714,7 +714,7 @@ footer ul a:visited, footer ul a:link {
 
 .composition .composition__title .fa-heart {
   font-weight: 400;
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: #99E2D0;
   -webkit-filter: brightness(20%);
           filter: brightness(20%);
@@ -729,7 +729,7 @@ footer ul a:visited, footer ul a:link {
           filter: brightness(100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(70%, #FF79DA));
   background: linear-gradient(#9356DC 0%, #FF79DA 70%);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }

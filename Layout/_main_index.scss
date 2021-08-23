@@ -58,14 +58,14 @@
 /*-----------Coeur-----------*/
     .fa-heart {
         font-weight: 400;
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: $color-tertiary;
         filter: brightness(20%);
         transition: filter .6s ease-in;
         &:hover{
         filter: brightness(100%);
         @include background-btn ($color-primary, $color-secondary);
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
         }
