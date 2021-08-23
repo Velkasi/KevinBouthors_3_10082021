@@ -19,14 +19,14 @@
     }
     .fa-heart {
         font-weight: 400;
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: $color-tertiary;
         filter: brightness(20%);
         transition: filter .6s ease-in;
         &:hover{
         filter: brightness(100%);
         @include background-btn ($color-primary, $color-secondary);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold; 
         }     
