@@ -3,6 +3,7 @@
 $color-primary: #9356DC;	
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
+$darken-tertiary: darken($color-tertiary,50%);
 $color-primary-rgba:rgba(147, 86, 220, 1);
 $color-secondary-rgba: rgba(255, 121, 218, 1);
 $color-tertiary-rgba:rgba(153, 226, 208, 1);

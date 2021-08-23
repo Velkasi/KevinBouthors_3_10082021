@@ -20,6 +20,7 @@
     color: $white; 
     }
 }
+/*---------------------------Bouton de fonctionnement+hover---------------------------*/
 .btn__menu {
 @include btn__box ($grey, $shadow, $color-primary);
 @extend %flex-align;

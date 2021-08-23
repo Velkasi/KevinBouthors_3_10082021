@@ -11,6 +11,7 @@
 		margin: 10px 0px 10px;
 		}
 	}
+/*--------------------Bouton en dégradé--------------------*/
 	.btn {
 		@extend %flex-center;
 		@include background-btn ($color-primary, $color-secondary);

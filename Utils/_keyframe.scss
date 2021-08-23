@@ -87,3 +87,13 @@
     
   }
 }
+/*-------------------Vignette----------------------*/
+
+@keyframes pop-up {
+  0% {
+  filter: brightness(2);
+  }
+  100% {
+  filter: brightness(1);
+  }
+}

@@ -270,6 +270,7 @@ header, .localisation, .reservation, .btn {
           animation: cache .5s both;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+  font-family: 'Shrikhand', cursive;
 }
 
 .spinner .letter {
@@ -521,16 +522,6 @@ header a:visited {
   max-width: 1280px;
 }
 
-.cards {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
-  row-gap: 2rem;
-}
-
 .card {
   position: relative;
   display: block;
@@ -539,6 +530,7 @@ header a:visited {
   text-decoration: none;
   color: inherit;
   font-size: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 .card__img {
@@ -547,6 +539,15 @@ header a:visited {
   border-radius: 1rem 1rem 0 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.card__vignet {
+  background-color: #99E2D0;
+  color: #1b6150;
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  padding: 0.5rem;
 }
 
 .card__footer {
