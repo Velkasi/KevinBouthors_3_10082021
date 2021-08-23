@@ -63,6 +63,8 @@ table {
 /*Padding*/
 /*Flou*/
 /*Breakpoint*/
+/*-----------------Boutons---------------*/
+/*-------------------------degradé couleur----------------------*/
 header, .localisation, .reservation, .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,6 +221,20 @@ header, .localisation, .reservation, .btn {
   }
 }
 
+@-webkit-keyframes popup {
+  50% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+}
+
+@keyframes popup {
+  50% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+}
+
 .spinner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,10 +260,16 @@ header, .localisation, .reservation, .btn {
 }
 
 .spinner .letter {
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #FF79DA;
   -webkit-animation: pulse 1s linear 3;
           animation: pulse 1s linear 3;
+}
+
+@media (min-width: 500px) {
+  .spinner .letter {
+    font-size: 4rem;
+  }
 }
 
 .spinner .point {
@@ -374,6 +396,7 @@ header a:visited {
   margin: 10px 0px 10px;
 }
 
+/*--------------------Bouton en dégradé--------------------*/
 .btn {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(70%, #FF79DA));
   background: linear-gradient(#9356DC 0%, #FF79DA 70%);
@@ -427,6 +450,7 @@ header a:visited {
   color: #ffff;
 }
 
+/*---------------------------Bouton de fonctionnement+hover---------------------------*/
 .btn__menu {
   width: 100%;
   height: 50px;
@@ -492,6 +516,7 @@ header a:visited {
   max-width: 1280px;
 }
 
+/*----------------Carte des restaurants---------------*/
 .card {
   position: relative;
   display: block;
@@ -501,6 +526,7 @@ header a:visited {
   color: inherit;
   font-size: 1rem;
   margin: 0 0 1rem 0;
+  /*-----------Coeur-----------*/
 }
 
 .card__img {
@@ -518,6 +544,8 @@ header a:visited {
   right: 1rem;
   top: 1.5rem;
   padding: 0.5rem;
+  -webkit-animation: popup 1s ease-in-out infinite;
+          animation: popup 1s ease-in-out infinite;
 }
 
 .card__footer {
@@ -554,7 +582,7 @@ header a:visited {
 
 .card .fa-heart {
   font-weight: 400;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: #99E2D0;
   -webkit-filter: brightness(20%);
           filter: brightness(20%);
@@ -569,7 +597,7 @@ header a:visited {
           filter: brightness(100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(70%, #FF79DA));
   background: linear-gradient(#9356DC 0%, #FF79DA 70%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -677,6 +705,7 @@ footer ul a:visited, footer ul a:link {
       justify-content: space-around;
   width: 100%;
   padding: 2rem 0 2rem 0;
+  /*-------------------------Coeur animé----------------------*/
 }
 
 .composition .composition__title .fa-2x {
@@ -685,7 +714,7 @@ footer ul a:visited, footer ul a:link {
 
 .composition .composition__title .fa-heart {
   font-weight: 400;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: #99E2D0;
   -webkit-filter: brightness(20%);
           filter: brightness(20%);
@@ -700,11 +729,12 @@ footer ul a:visited, footer ul a:link {
           filter: brightness(100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(70%, #FF79DA));
   background: linear-gradient(#9356DC 0%, #FF79DA 70%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
 
+/*---------------------Delai d'apparition des repas-----------------------------*/
 .container__repas {
   margin-bottom: 2rem;
 }
@@ -777,6 +807,7 @@ footer ul a:visited, footer ul a:link {
   -webkit-box-flex: 5;
       -ms-flex: 5;
           flex: 5;
+  /*-----------------------Animation check avec rotation du logo----------------------------------*/
 }
 
 .repas__text {
@@ -866,6 +897,7 @@ footer ul a:visited, footer ul a:link {
           animation: repas-slide-left 1s both;
 }
 
+/*----------------------------------Media-queries pour toute les tailles-------------------------------------*/
 @media (min-width: 500px) {
   .composition {
     display: -webkit-box;

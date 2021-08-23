@@ -13,7 +13,10 @@
     animation-delay: 2s;
     font-family: 'Shrikhand', cursive;
         .letter {
-            font-size: 4rem;
+            font-size: 2.5rem;
+            @include for-tablet {
+                font-size: 4rem;
+            }
             color: $color-secondary;
             animation: pulse 1s linear 3;
         }
