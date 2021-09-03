@@ -4,14 +4,26 @@
     padding: 30px 10px;
     margin-top: 20px;
     &__title {
-        margin:0 0 1rem 0;
+        margin: 0 0 1rem 0;
         font-size: 1.5rem;
+        @include for-tablet {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
     }
 }
 .container {
         margin: auto;
         position: relative;
         max-width: 1280px;
+        @include for-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1820px;
+    }
 }
 /*----------------Carte des restaurants---------------*/
 .card {
@@ -23,11 +35,19 @@
     color: inherit;
     font-size: 1rem;
     margin: 0 0 1rem 0;
+    @include for-tablet {
+        margin: 1rem;
+        width: 40rem;
+        height: 20rem;
+    }
     &__img {
         width: 100%;
         height: 10rem;
         border-radius: 1rem 1rem 0 0;
         object-fit: cover;
+        @include for-tablet {
+            height: 75%;
+        }
     }
     &__vignet {
         background-color: $color-tertiary;
